@@ -1,14 +1,14 @@
-# XRP Wallet App for Ledger Nano S and Ledger Nano X
+# CSC Wallet App for Ledger Nano S and Ledger Nano X
 
 ## Introduction
-This repository contains the source code for the XRP wallet app that makes it possible to securely store XRP and assets issued on the XRP Ledger using Ledger Nano S and Ledger Nano X devices. 
+This repository contains the source code for the XRP wallet app that makes it possible to securely store CSC and assets issued on the CSC Ledger using Ledger Nano S and Ledger Nano X devices. 
 
 To add Ledger Nano S and Ledger Nano X support in your application, please see the
-NPM package [hw-app-xrp](https://www.npmjs.com/package/@ledgerhq/hw-app-xrp)
+NPM package [casinocoin-ledger-demo-app](https://github.com/casinocoin/casinocoin-ledger-demo-app)
 and the examples below. 
 
 ## Features
-The XRP wallet app comes with the following features:
+The CSC wallet app comes with the following features:
 
   - Support for all transaction types:
     - AccountSet
