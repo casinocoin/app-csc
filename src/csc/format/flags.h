@@ -1,5 +1,6 @@
 /*******************************************************************************
 *   CSC Wallet
+*   (c) 2017 Ledger
 *   (c) 2020 Towo Labs
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +16,17 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_CSC_IDLEMENU_H
-#define LEDGER_APP_CSC_IDLEMENU_H
+#ifndef LEDGER_APP_CSC_FLAGS_H
+#define LEDGER_APP_CSC_FLAGS_H
 
-void displayIdleMenu();
+#include <stdbool.h>
+#include "fields.h"
 
-#endif //LEDGER_APP_CSC_IDLEMENU_H
+// Universal Transaction flags (hidden)
+#define TF_FULLY_CANONICAL_SIG 0x80000000u
+
+bool isFlag(field_t* field);
+bool isFlagHidden(field_t* field);
+void formatFlags(field_t* field, char *dst);
+
+#endif //LEDGER_APP_CSC_FLAGS_H

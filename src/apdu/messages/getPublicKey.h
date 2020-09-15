@@ -1,5 +1,5 @@
 /*******************************************************************************
-*   XRP Wallet
+*   CSC Wallet
 *   (c) 2017 Ledger
 *   (c) 2020 Towo Labs
 *
@@ -16,8 +16,8 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_XRP_GETPUBLICKEY_H
-#define LEDGER_APP_XRP_GETPUBLICKEY_H
+#ifndef LEDGER_APP_CSC_GETPUBLICKEY_H
+#define LEDGER_APP_CSC_GETPUBLICKEY_H
 
 #include <stdint.h>
 
@@ -25,4 +25,4 @@ void handleGetPublicKey(uint8_t p1, uint8_t p2, uint8_t *dataBuffer,
                         uint16_t dataLength, volatile unsigned int *flags,
                         volatile unsigned int *tx);
 
-#endif //LEDGER_APP_XRP_GETPUBLICKEY_H
+#endif //LEDGER_APP_CSC_GETPUBLICKEY_H

@@ -1,5 +1,5 @@
 /*******************************************************************************
-*   XRP Wallet
+*   CSC Wallet
 *   (c) 2017 Ledger
 *   (c) 2020 Towo Labs
 *
@@ -24,7 +24,7 @@
 #include "../global.h"
 #include "../../transaction/transaction.h"
 #include "../../ui/main/idleMenu.h"
-#include "../../xrp/xrpHelpers.h"
+#include "../../csc/cscHelpers.h"
 
 static const uint8_t prefixLength = 4;
 static const uint8_t pubKeyLength = 33;
@@ -74,8 +74,8 @@ void signTransaction() {
                 uint8_t *suffixData = privateKeyData + pubKeyLength;
 
                 cx_ecfp_generate_pair(tmpCtx.transactionContext.curve, &publicKey, &privateKey, 1);
-                xrp_compress_public_key(&publicKey, publicKeyData, pubKeyLength);
-                xrp_public_key_hash160(publicKeyData, pubKeyLength, suffixData);
+                csc_compress_public_key(&publicKey, publicKeyData, pubKeyLength);
+                csc_public_key_hash160(publicKeyData, pubKeyLength, suffixData);
 
                 os_memmove(tmpCtx.transactionContext.rawTx + tmpCtx.transactionContext.rawTxLength, suffixData, suffixLength);
                 tmpCtx.transactionContext.rawTxLength += suffixLength;

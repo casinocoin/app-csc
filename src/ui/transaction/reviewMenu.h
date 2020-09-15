@@ -1,5 +1,5 @@
 /*******************************************************************************
-*   XRP Wallet
+*   CSC Wallet
 *   (c) 2020 Towo Labs
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,15 +15,15 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_XRP_REVIEWMENU_H
-#define LEDGER_APP_XRP_REVIEWMENU_H
+#ifndef LEDGER_APP_CSC_REVIEWMENU_H
+#define LEDGER_APP_CSC_REVIEWMENU_H
 
 #include "../../transaction/transaction.h"
-#include "../../xrp/parse/xrpParse.h"
+#include "../../csc/parse/cscParse.h"
 
 #define OPTION_SIGN 0
 #define OPTION_REJECT 1
 
 void displayReviewMenu(parseResult_t *transactionParam, resultAction_t callback);
 
-#endif //LEDGER_APP_XRP_REVIEWMENU_H
+#endif //LEDGER_APP_CSC_REVIEWMENU_H

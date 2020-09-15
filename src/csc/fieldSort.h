@@ -15,9 +15,11 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_CSC_IDLEMENU_H
-#define LEDGER_APP_CSC_IDLEMENU_H
+#ifndef LEDGER_APP_CSC_FIELDSORT_H
+#define LEDGER_APP_CSC_FIELDSORT_H
 
-void displayIdleMenu();
+#include "parse/cscParse.h"
 
-#endif //LEDGER_APP_CSC_IDLEMENU_H
+void sortFields(parseResult_t *result);
+
+#endif //LEDGER_APP_CSC_FIELDSORT_H

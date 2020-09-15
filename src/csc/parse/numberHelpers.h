@@ -15,9 +15,18 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_CSC_IDLEMENU_H
-#define LEDGER_APP_CSC_IDLEMENU_H
+#ifndef LEDGER_APP_CSC_NUMBERHELPERS_H
+#define LEDGER_APP_CSC_NUMBERHELPERS_H
 
-void displayIdleMenu();
+#include <stdint.h>
 
-#endif //LEDGER_APP_CSC_IDLEMENU_H
+#define EXP_MIN -96
+#define EXP_MAX 80
+#define MANTISSA_MIN 1000000000000000
+#define MANTISSA_MAX 9999999999999999
+
+void parseDecimalNumber(char* dst, uint16_t maxLen, uint8_t sign, int16_t exponent, uint64_t mantissa);
+char intToNumberChar(uint64_t value);
+void print_uint64_t(char *dst, uint16_t len, uint64_t value);
+
+#endif //LEDGER_APP_CSC_NUMBERHELPERS_H

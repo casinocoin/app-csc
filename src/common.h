@@ -1,5 +1,5 @@
 /*******************************************************************************
-*   XRP Wallet
+*   CSC Wallet
 *   (c) 2020 Towo Labs
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,12 +15,12 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_XRP_COMMON_H
-#define LEDGER_APP_XRP_COMMON_H
+#ifndef LEDGER_APP_CSC_COMMON_H
+#define LEDGER_APP_CSC_COMMON_H
 
 // Simple macro for building more readable switch statements
 #define CASE(v,n) case v: strcpy(dst, n); return;
 
 typedef void (*action_t)();
 
-#endif //LEDGER_APP_XRP_COMMON_H
+#endif //LEDGER_APP_CSC_COMMON_H

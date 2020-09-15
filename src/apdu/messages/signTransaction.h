@@ -1,5 +1,5 @@
 /*******************************************************************************
-*   XRP Wallet
+*   CSC Wallet
 *   (c) 2017 Ledger
 *   (c) 2020 Towo Labs
 *
@@ -16,15 +16,15 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_XRP_SIGNTRANSACTION_H
-#define LEDGER_APP_XRP_SIGNTRANSACTION_H
+#ifndef LEDGER_APP_CSC_SIGNTRANSACTION_H
+#define LEDGER_APP_CSC_SIGNTRANSACTION_H
 
 #include <stdint.h>
-#include "../../xrp/parse/xrpParse.h"
+#include "../../csc/parse/cscParse.h"
 
 extern parseContext_t parseContext;
 
 void handleSign(uint8_t p1, uint8_t p2, uint8_t *workBuffer,
                 uint8_t dataLength, volatile unsigned int *flags);
 
-#endif //LEDGER_APP_XRP_SIGNTRANSACTION_H
+#endif //LEDGER_APP_CSC_SIGNTRANSACTION_H

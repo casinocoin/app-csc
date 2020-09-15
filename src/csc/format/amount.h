@@ -1,5 +1,6 @@
 /*******************************************************************************
 *   CSC Wallet
+*   (c) 2017 Ledger
 *   (c) 2020 Towo Labs
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +16,15 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_CSC_IDLEMENU_H
-#define LEDGER_APP_CSC_IDLEMENU_H
+#ifndef LEDGER_APP_CSC_AMOUNT_H
+#define LEDGER_APP_CSC_AMOUNT_H
 
-void displayIdleMenu();
+#include <stdbool.h>
+#include "fields.h"
 
-#endif //LEDGER_APP_CSC_IDLEMENU_H
+void amountFormatter(field_t* field, char *dst);
+void currencyFormatter(field_t* field, char *dst);
+
+bool hasNonStandardCurrency(field_t* field);
+
+#endif //LEDGER_APP_CSC_AMOUNT_H

@@ -1,5 +1,5 @@
 /*******************************************************************************
-*   XRP Wallet
+*   CSC Wallet
 *   (c) 2017 Ledger
 *   (c) 2020 Towo Labs
 *
@@ -22,8 +22,8 @@
 #include "getPublicKey.h"
 #include "../constants.h"
 #include "../global.h"
-#include "../../xrp/xrpHelpers.h"
-#include "../../xrp/parse/xrpParse.h"
+#include "../../csc/cscHelpers.h"
+#include "../../csc/parse/cscParse.h"
 #include "../../ui/address/addressUI.h"
 #include "../../ui/main/idleMenu.h"
 
@@ -31,7 +31,7 @@ uint32_t set_result_get_publicKey() {
     uint32_t tx = 0;
     uint32_t addressLength = strlen(tmpCtx.publicKeyContext.address);
     G_io_apdu_buffer[tx++] = 33;
-    xrp_compress_public_key(&tmpCtx.publicKeyContext.publicKey, G_io_apdu_buffer + tx, 33);
+    csc_compress_public_key(&tmpCtx.publicKeyContext.publicKey, G_io_apdu_buffer + tx, 33);
     tx += 33;
     G_io_apdu_buffer[tx++] = addressLength;
     os_memmove(G_io_apdu_buffer + tx, tmpCtx.publicKeyContext.address, addressLength);
@@ -115,9 +115,9 @@ void handleGetPublicKey(uint8_t p1, uint8_t p2, uint8_t *dataBuffer,
             explicit_bzero(&privateKey, sizeof(privateKey));
             explicit_bzero(privateKeyData, sizeof(privateKeyData));
             io_seproxyhal_io_heartbeat();
-            xrp_compress_public_key(&tmpCtx.publicKeyContext.publicKey, privateKeyData, 33);
+            csc_compress_public_key(&tmpCtx.publicKeyContext.publicKey, privateKeyData, 33);
             io_seproxyhal_io_heartbeat();
-            addressLength = xrp_public_key_to_encoded_base58(privateKeyData, 33,
+            addressLength = csc_public_key_to_encoded_base58(privateKeyData, 33,
                                                              tmpCtx.publicKeyContext.address,
                                                              sizeof(tmpCtx.publicKeyContext.address), 0, 0);
             tmpCtx.publicKeyContext.address[addressLength] = '\0';

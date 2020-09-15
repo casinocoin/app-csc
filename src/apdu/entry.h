@@ -1,5 +1,5 @@
 /*******************************************************************************
-*   XRP Wallet
+*   CSC Wallet
 *   (c) 2017 Ledger
 *   (c) 2020 Towo Labs
 *
@@ -16,9 +16,9 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_XRP_ENTRY_H
-#define LEDGER_APP_XRP_ENTRY_H
+#ifndef LEDGER_APP_CSC_ENTRY_H
+#define LEDGER_APP_CSC_ENTRY_H
 
 void handleApdu(volatile unsigned int *flags, volatile unsigned int *tx);
 
-#endif //LEDGER_APP_XRP_ENTRY_H
+#endif //LEDGER_APP_CSC_ENTRY_H

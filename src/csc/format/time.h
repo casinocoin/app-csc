@@ -15,9 +15,15 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_CSC_IDLEMENU_H
-#define LEDGER_APP_CSC_IDLEMENU_H
+#ifndef LEDGER_APP_CSC_TIME_H
+#define LEDGER_APP_CSC_TIME_H
 
-void displayIdleMenu();
+#include <stdbool.h>
+#include "fields.h"
 
-#endif //LEDGER_APP_CSC_IDLEMENU_H
+bool isTime(field_t* field);
+bool isTimeDelta(field_t* field);
+void formatTime(field_t* field, char *dst);
+void formatTimeDelta(field_t* field, char *dst);
+
+#endif //LEDGER_APP_CSC_TIME_H

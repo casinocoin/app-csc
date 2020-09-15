@@ -1,5 +1,5 @@
 /*******************************************************************************
-*   XRP Wallet
+*   CSC Wallet
 *   (c) 2020 Towo Labs
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,9 +17,9 @@
 
 #include "../../common.h"
 
-#ifndef LEDGER_APP_XRP_ADDRESSUI_H
-#define LEDGER_APP_XRP_ADDRESSUI_H
+#ifndef LEDGER_APP_CSC_ADDRESSUI_H
+#define LEDGER_APP_CSC_ADDRESSUI_H
 
 void displayAddressConfirmationUI(char* address, action_t onApprove, action_t onReject);
 
-#endif //LEDGER_APP_XRP_ADDRESSUI_H
+#endif //LEDGER_APP_CSC_ADDRESSUI_H

@@ -1,5 +1,5 @@
 /*******************************************************************************
-*   XRP Wallet
+*   CSC Wallet
 *   (c) 2017 Ledger
 *   (c) 2020 Towo Labs
 *
@@ -16,12 +16,12 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_XRP_GLOBAL_H
-#define LEDGER_APP_XRP_GLOBAL_H
+#ifndef LEDGER_APP_CSC_GLOBAL_H
+#define LEDGER_APP_CSC_GLOBAL_H
 
 #include <stdbool.h>
 #include "constants.h"
-#include "../xrp/parse/xrpParse.h"
+#include "../csc/parse/cscParse.h"
 
 typedef enum {
     IDLE,
@@ -54,4 +54,4 @@ extern signState_e signState;
 
 void resetTransactionContext();
 
-#endif //LEDGER_APP_XRP_GLOBAL_H
+#endif //LEDGER_APP_CSC_GLOBAL_H

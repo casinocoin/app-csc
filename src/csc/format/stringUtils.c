@@ -1,5 +1,6 @@
 /*******************************************************************************
 *   CSC Wallet
+*   (c) 2017 Ledger
 *   (c) 2020 Towo Labs
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +16,21 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_CSC_IDLEMENU_H
-#define LEDGER_APP_CSC_IDLEMENU_H
+#include "stringUtils.h"
+#include <os.h>
+#include <string.h>
 
-void displayIdleMenu();
+char* appendString(char *out, char *in) {
+    os_memmove(out, in, strlen(in));
+    return out + strlen(in);
+}
 
-#endif //LEDGER_APP_CSC_IDLEMENU_H
+char* appendItem(char *out, char *in) {
+    if (out[0] != '\0') {
+        out[1] = ',';
+        out[2] = ' ';
+        out += 3;
+    }
+
+    return appendString(out, in) - 1;
+}

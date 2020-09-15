@@ -1,6 +1,6 @@
 /*******************************************************************************
 *   CSC Wallet
-*   (c) 2020 Towo Labs
+*   (c) 2017 Ledger
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_CSC_IDLEMENU_H
-#define LEDGER_APP_CSC_IDLEMENU_H
+#include "os.h"
+#include "cx.h"
 
-void displayIdleMenu();
-
-#endif //LEDGER_APP_CSC_IDLEMENU_H
+unsigned short csc_encode_base58(const unsigned char WIDE *in, unsigned char length,
+                                   char *out,
+                                   unsigned short maxoutlen);

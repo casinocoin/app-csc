@@ -1,5 +1,5 @@
 /*******************************************************************************
-*   XRP Wallet
+*   CSC Wallet
 *   (c) 2017 Ledger
 *   (c) 2020 Towo Labs
 *
@@ -16,11 +16,11 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_XRP_GETAPPCONFIGURATION_H
-#define LEDGER_APP_XRP_GETAPPCONFIGURATION_H
+#ifndef LEDGER_APP_CSC_GETAPPCONFIGURATION_H
+#define LEDGER_APP_CSC_GETAPPCONFIGURATION_H
 
 #include <stdint.h>
 
 void handleGetAppConfiguration(volatile unsigned int *tx);
 
-#endif //LEDGER_APP_XRP_GETAPPCONFIGURATION_H
+#endif //LEDGER_APP_CSC_GETAPPCONFIGURATION_H

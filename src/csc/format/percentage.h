@@ -15,9 +15,13 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_CSC_IDLEMENU_H
-#define LEDGER_APP_CSC_IDLEMENU_H
+#ifndef LEDGER_APP_CSC_PERCENTAGE_H
+#define LEDGER_APP_CSC_PERCENTAGE_H
 
-void displayIdleMenu();
+#include <stdbool.h>
+#include "fields.h"
 
-#endif //LEDGER_APP_CSC_IDLEMENU_H
+bool isPercentage(field_t* field);
+void formatPercentage(field_t* field, char *dst);
+
+#endif //LEDGER_APP_CSC_PERCENTAGE_H

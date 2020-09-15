@@ -1,5 +1,5 @@
 /*******************************************************************************
-*   XRP Wallet
+*   CSC Wallet
 *   (c) 2020 Towo Labs
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +20,7 @@
 #include <os_io_seproxyhal.h>
 #include <string.h>
 #include "../../transaction/transaction.h"
-#include "../../xrp/format/format.h"
+#include "../../csc/format/format.h"
 #include "../../glyphs.h"
 
 char fieldName[MAX_FIELDNAME_LEN];

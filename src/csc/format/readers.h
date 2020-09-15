@@ -1,5 +1,6 @@
 /*******************************************************************************
 *   CSC Wallet
+*   (c) 2017 Ledger
 *   (c) 2020 Towo Labs
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +16,18 @@
 *  limitations under the License.
 ********************************************************************************/
 
-#ifndef LEDGER_APP_CSC_IDLEMENU_H
-#define LEDGER_APP_CSC_IDLEMENU_H
+#ifndef LEDGER_APP_CSC_READERS_H
+#define LEDGER_APP_CSC_READERS_H
 
-void displayIdleMenu();
+#include <stdint.h>
 
-#endif //LEDGER_APP_CSC_IDLEMENU_H
+uint64_t readUnsigned(const uint8_t *src, uint8_t numBytes);
+void readHex(char *dst, uint8_t *src, uint16_t dataLength);
+void readString(char *dst, uint8_t *src, uint8_t dataLength);
+
+uint16_t readUnsigned8(const uint8_t *src);
+uint16_t readUnsigned16(const uint8_t *src);
+uint32_t readUnsigned32(const uint8_t *src);
+uint64_t readUnsigned64(const uint8_t *src);
+
+#endif //LEDGER_APP_CSC_READERS_H
