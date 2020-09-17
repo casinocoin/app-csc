@@ -20,7 +20,7 @@ $(error Environment variable BOLOS_SDK is not set)
 endif
 include $(BOLOS_SDK)/Makefile.defines
 
-APPNAME = XRP 
+APPNAME = CSC 
 APP_LOAD_PARAMS=--appFlags 0x240 --path "44'/144'" --curve secp256k1 --curve ed25519 $(COMMON_LOAD_PARAMS) 
 
 APPVERSION_M=2
@@ -30,7 +30,7 @@ APPVERSION=$(APPVERSION_M).$(APPVERSION_N).$(APPVERSION_P)
 DEFINES   += UNUSED\(x\)=\(void\)x
 DEFINES   += APPVERSION=\"$(APPVERSION)\"
 
-COIN = xrp
+COIN = csc
 
 #prepare hsm generation
 ifeq ($(TARGET_NAME),TARGET_NANOX)
@@ -59,7 +59,7 @@ DEFINES   +=  LEDGER_MAJOR_VERSION=$(APPVERSION_M) LEDGER_MINOR_VERSION=$(APPVER
 DEFINES   += HAVE_U2F HAVE_IO_U2F
 DEFINES   += USB_SEGMENT_SIZE=64
 DEFINES   += BLE_SEGMENT_SIZE=32 #max MTU, min 20
-DEFINES   += U2F_PROXY_MAGIC=\"XRP\"
+DEFINES   += U2F_PROXY_MAGIC=\"CSC\"
 
 #WEBUSB_URL     = www.ledgerwallet.com
 #DEFINES       += HAVE_WEBUSB WEBUSB_URL_SIZE_B=$(shell echo -n $(WEBUSB_URL) | wc -c) WEBUSB_URL=$(shell echo -n $(WEBUSB_URL) | sed -e "s/./\\\'\0\\\',/g")
@@ -146,4 +146,4 @@ dep/%.d: %.c Makefile.genericwallet
 
 
 listvariants:
-	@echo VARIANTS COIN xrp
+	@echo VARIANTS COIN csc
