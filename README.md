@@ -236,3 +236,9 @@ To upload the app to your device, run the following command:
 ```sh
 make load
 ```
+
+## Uninstalling
+To remove the app from your device, run the following command:
+```sh
+make delete
+```
